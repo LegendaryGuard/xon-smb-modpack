@@ -54,6 +54,7 @@ mv -v *.dat $(dirname "$0")/compiled
 if [ -n "${L10N:-}" ]; then
     tput bold; tput setaf 3; echo "Not merging localizations."; tput sgr0
 else
+    chmod +x ./lang/merge.sh
     ./lang/merge.sh
 fi
 
